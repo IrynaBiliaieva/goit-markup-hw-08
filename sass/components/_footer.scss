@@ -1,0 +1,84 @@
+footer {
+  display: flex;
+  align-items: baseline;
+  padding-top: 45px;
+  padding-bottom: 28px;
+  background-color: $footer-bg-color;
+  line-height: 1.71;
+  letter-spacing: 0.42px;
+
+  .social-app {
+    margin-left: 0;
+  }
+
+  .social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $primary-white-color;
+  }
+}
+
+footer .upper-footer {
+  display: flex;
+  align-items: baseline;
+}
+.address {
+  display: block;
+  margin-right: 69px;
+  color: $primary-white-color;
+}
+
+.emailing {
+  margin-left: auto;
+}
+footer .logo {
+  color: $primary-white-color;
+}
+
+address {
+  font-style: normal;
+  margin-top: 20px;
+
+  a {
+    color: $primary-text-color;
+    margin-top: 9px;
+  }
+}
+strong {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+.emailing {
+  margin-left: 94px;
+}
+.emailing-form {
+  display: inline-flex;
+}
+
+footer .form-input {
+  height: 50px;
+  width: 358px;
+  padding-right: 12px;
+  padding-left: 16px;
+  margin-left: 0;
+  margin-right: 12px;
+
+  background-color: $footer-bg-color;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+
+  font: $secondary-font;
+  line-height: 1.25;
+}
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: $primary-white-color;
+}

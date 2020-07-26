@@ -1,0 +1,26 @@
+.portfolio h2 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  padding-left: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.84px;
+  color: $title-text-color;
+  text-decoration: none;
+}
+.portfolio p {
+  font: $secondary-font;
+  line-height: 1.87;
+  letter-spacing: 0.42px;
+  color: $primary-text-color;
+  text-decoration: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
+
+.portfolio .container {
+  margin-top: 93px;
+  margin-bottom: 94px;
+}
