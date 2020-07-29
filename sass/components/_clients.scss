@@ -1,16 +1,33 @@
 .clients {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
+}
 
-  .item + .item {
-    margin-left: 30px;
+.clients .item {
+  height: 90px;
+  margin: 15px;
+
+  @media screen and (max-width: 479px) {
+    width: calc((100% - 4 * 15px) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+  @media screen and (min-width: 767px) {
+    width: calc((100% - 12 * 15px) / 6);
   }
 }
+
 .clients a {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  width: 170px;
+  justify-content: center;
   height: 90px;
   fill: $primary-text-color;
   border: 1px solid #afb1b8;

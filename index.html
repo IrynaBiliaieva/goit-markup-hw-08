@@ -18,12 +18,21 @@
     <!--header-->
     <header class="page-header">
       <div class="container header">
-        <nav>
-          <ul class="site-nav">
-            <li class="item">
+        
+        <div class="page-logo">  
               <a lang="en" href="index.html" class="logo"
-                ><span>Web</span> Studio</a
-              >
+                ><span>Web</span> Studio</a>
+        </div>
+        <button type=button class="menu-button" data-menu-button>
+          Меню
+          <svg>
+            <use href="./images/sprite.svg#close" class="icon-close"></use>
+            <use href="./images/sprite.svg#envelope" class="icon-open"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu">
+         <nav>
+          <ul class="site-nav">
             </li>
             <li class="item">
               <a href="index.html" class="link current-page">Студия</a>
@@ -33,8 +42,8 @@
             </li>
             <li class="item"><a href="#contacts" class="link">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contact-nav">
+         </nav>
+         <ul class="contact-nav">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link">
               <svg class="icon-email">
@@ -51,7 +60,8 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
