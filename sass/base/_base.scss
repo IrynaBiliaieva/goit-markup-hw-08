@@ -1,6 +1,9 @@
 body {
   font: $primary-font;
 }
+body .modal-open {
+  overflow: hidden;
+}
 
 .container {
   padding-left: 15px;
