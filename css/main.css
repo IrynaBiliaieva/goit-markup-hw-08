@@ -427,7 +427,7 @@ img {
   min-height: auto;
 }
 
-.header {
+header {
   border-bottom: 1px solid #ececec;
   position: relative;
 }
