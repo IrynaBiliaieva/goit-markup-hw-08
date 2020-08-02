@@ -18,48 +18,49 @@
     <!--header-->
     <header class="page-header">
       <div class="container header">
-        
-        <div class="page-logo">  
-              <a lang="en" href="index.html" class="logo"
-                ><span>Web</span> Studio</a>
+        <div class="page-logo">
+          <a lang="en" href="index.html" class="logo"
+            ><span>Web</span> Studio</a
+          >
         </div>
-        <button type=button class="menu-button" data-menu-button>
+        <button type="button" class="menu-button" data-menu-button>
           Меню
           <svg>
-            <use href="./images/sprite.svg#close" class="icon-close"></use>
-            <use href="./images/sprite.svg#envelope" class="icon-open"></use>
+            <use href="./img/sprite.svg#close" class="icon-close"></use>
+            <use href="./img/sprite.svg#menu" class="icon-open"></use>
           </svg>
         </button>
-        <div class="mobile-menu">
-         <nav>
-          <ul class="site-nav">
+        <div class="mobile-menu" data-menu>
+          <nav>
+            <ul class="site-nav">
+              <li class="item">
+                <a href="index.html" class="link current-page">Студия</a>
+              </li>
+              <li class="item">
+                <a href="portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item">
+                <a href="#contacts" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact-nav">
+            <li class="item">
+              <a href="mailto:info@devstudio.com" class="link">
+                <svg class="icon-email">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li class="item">
-              <a href="index.html" class="link current-page">Студия</a>
+              <a href="tel:+380961111111" class="link">
+                <svg class="icon-tell">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="item">
-              <a href="portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="#contacts" class="link">Контакты</a></li>
-          </ul>
-         </nav>
-         <ul class="contact-nav">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="icon-email">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg class="icon-tell">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
           </ul>
         </div>
       </div>
@@ -73,13 +74,13 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="button primary" data-open-modal>
+          <button class="button primary" data-modal-open>
             Заказать услугу
           </button>
         </div>
       </section>
       <!--modal form-->
-      <div data-backdrop class="backdrop is-hidden">
+      <div data-modal class="backdrop is-hidden">
         <div class="popup">
           <h2>Оставьте свои данные, мы вам перезвоним</h2>
           <form class="form js-form">
@@ -139,7 +140,7 @@
 
             <button type="submit" class="primary">Отправить</button>
           </form>
-          <button data-close-modal>
+          <button data-modal-close>
             <svg class="close-icon">
               <use href="./images/sprite.svg#close"></use>
             </svg>
@@ -190,7 +191,8 @@
           <ul class="works-list">
             <li class="item">
               <img
-                src="./images/laptop-img.jpg"
+                srcset=".img/we1.jpg x1, ./img/we1@2x.jpg x2"
+                src="./img/we1.jpg"
                 alt="картинка ноутбука"
                 width="370"
                 height="294"
@@ -201,8 +203,9 @@
             </li>
             <li class="item">
               <img
-                src="./images/cellphone-img.jpg"
-                alt="картинка смаотфона"
+                srcset=".img/we2.jpg x1, ./img/we2@2x.jpg x2"
+                src="./img/we2.jpg"
+                alt="картинка смартфона"
                 width="370"
                 height="294"
               />
@@ -212,7 +215,8 @@
             </li>
             <li class="item">
               <img
-                src="./images/monitor-img.jpg"
+                srcset=".img/we3.jpg x1, ./img/we3@2x.jpg x2"
+                src="./img/we3.jpg"
                 alt="картинка монитора"
                 width="370"
                 height="294"
@@ -230,12 +234,29 @@
           <h2 lang="ru" class="section-title">Наша команда</h2>
           <ul class="our-team">
             <li class="item">
-              <img
-                src="./images/john.jpg"
-                alt="Николай Кучеренко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/tm1-m.jpg 1x, ./img/tm1-m@2x.jpg 2x"
+                  media="(max-width: 576px)"
+                />
+
+                <source
+                  srcset="./img/tm1-d.jpg 1x, ./img/tm1-d@2x.jpg 2x"
+                  media="(min-width: 1140px)"
+                />
+
+                <source
+                  srcset="./img/tm1-t.jpg 1x, ./img/tm1-t@2x.jpg 2x"
+                  media="(min-width: 577px)"
+                />
+
+                <img
+                  src="./img/tm1-d.jpg 1x, ./img/tm1-d@2x.jpg 2x"
+                  class="team-image"
+                  alt="Николай Кучеренко"
+                />
+              </picture>
+
               <h3>Николай Кучеренко</h3>
               <p lang="en">Product Designer</p>
               <ul class="social-app">
@@ -284,12 +305,29 @@
             </li>
 
             <li class="item">
-              <img
-                src="./images/marta.jpg"
-                alt="Ольга Иванова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/tm2-m.jpg 1x, ./img/tm2-m@2x.jpg 2x"
+                  media="(max-width: 576px)"
+                />
+
+                <source
+                  srcset="./img/tm2-d.jpg 1x, ./img/tm2-d@2x.jpg 2x"
+                  media="(min-width: 1140px)"
+                />
+
+                <source
+                  srcset="./img/tm2-t.jpg 1x, ./img/tm2-t@2x.jpg 2x"
+                  media="(min-width: 577px)"
+                />
+
+                <img
+                  src="./img/tm2-d.jpg 1x, ./img/tm2-d@2x.jpg 2x"
+                  class="team-image"
+                  alt="Ольга Иванова"
+                />
+              </picture>
+
               <h3>Ольга Иванова</h3>
               <p lang="en">Frontend Developer</p>
               <ul class="social-app">
@@ -337,12 +375,29 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/robert.jpg"
-                alt="Андрей Шевченко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/tm3-m.jpg 1x, ./img/tm3-m@2x.jpg 2x"
+                  media="(max-width: 576px)"
+                />
+
+                <source
+                  srcset="./img/tm3-d.jpg 1x, ./img/tm3-d@2x.jpg 2x"
+                  media="(min-width: 1140px)"
+                />
+
+                <source
+                  srcset="./img/tm3-t.jpg 1x, ./img/tm3-t@2x.jpg 2x"
+                  media="(min-width: 577px)"
+                />
+
+                <img
+                  src="./img/tm3-d.jpg 1x, ./img/tm3-d@2x.jpg 2x"
+                  class="team-image"
+                  alt="Андрей Шевченко"
+                />
+              </picture>
+
               <h3>Андрей Шевченко</h3>
               <p lang="en">Marketing</p>
               <ul class="social-app">
@@ -390,12 +445,29 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/martin.jpg"
-                alt="Иван Николаев"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/tm4-m.jpg 1x, ./img/tm4-m@2x.jpg 2x"
+                  media="(max-width: 576px)"
+                />
+
+                <source
+                  srcset="./img/tm4-d.jpg 1x, ./img/tm4-d@2x.jpg 2x"
+                  media="(min-width: 1140px)"
+                />
+
+                <source
+                  srcset="./img/tm4-t.jpg 1x, ./img/tm4-t@2x.jpg 2x"
+                  media="(min-width: 577px)"
+                />
+
+                <img
+                  src="./img/tm4-d.jpg 1x, ./img/tm4-d@2x.jpg 2x"
+                  class="team-image"
+                  alt="Иван Николаев"
+                />
+              </picture>
+
               <h3>Иван Николаев</h3>
               <p lang="en">UI Designer</p>
               <ul class="social-app">
@@ -572,37 +644,7 @@
         </div>
       </div>
     </footer>
-    <script>
-      (() => {
-        document.querySelector(".js-form").addEventListener("submit", (e) => {
-          e.preventDefault();
-
-          new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`)
-          );
-
-          e.currentTarget.reset();
-        });
-      })();
-
-      const refs = {
-        openModalBtn: document.querySelector("[data-open-modal]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
-        backdrop: document.querySelector("[data-backdrop]"),
-      };
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-    </script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

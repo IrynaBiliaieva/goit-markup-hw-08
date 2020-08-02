@@ -1,13 +1,27 @@
 .feature-list {
-  /*display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .item + .item {
     margin-left: 30px;
-    min-width: 270px;
-  }*/
+  }
 
   .item {
     margin-top: 30px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc((100% - 4 * 15px) / 2);
+
+      &:nth-child(2n-1) {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 8 * 15px) / 4);
+    }
   }
 
   .item::before {

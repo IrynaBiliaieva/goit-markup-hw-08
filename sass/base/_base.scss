@@ -133,3 +133,8 @@ p {
   letter-spacing: 0.42px;
   color: $primary-text-color;
 }
+img {
+  display: block;
+  max-width: 100%;
+  min-height: auto;
+}
