@@ -1057,8 +1057,10 @@ textarea:not(:placeholder-shown) + .comment-label {
   }
 }
 
-.feature-list .item + .item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .feature-list .item + .item {
+    margin-left: 30px;
+  }
 }
 
 .feature-list .item {
@@ -1167,8 +1169,10 @@ textarea:not(:placeholder-shown) + .comment-label {
   }
 }
 
-.our-team .item + .item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .our-team .item + .item {
+    margin-left: 30px;
+  }
 }
 
 .our-team > .item {
