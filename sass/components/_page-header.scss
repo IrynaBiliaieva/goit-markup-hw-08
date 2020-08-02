@@ -10,7 +10,7 @@
   min-height: 80px;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     justify-content: space-between;
   }
 }
@@ -31,7 +31,7 @@
     border: none;
   }
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -50,7 +50,7 @@
 }
 
 .mobile-menu {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
 
     position: absolute;
@@ -93,14 +93,14 @@
 }
 
 .site-nav {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: block;
     font-size: 18px;
     line-height: 1.16;
     letter-spacing: 0.28px;
     text-align: center;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
   }
@@ -111,7 +111,7 @@
 
   display: block;
   color: $title-text-color;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 40px;
   }
 }
@@ -133,12 +133,12 @@
   }
 }
 .site-nav .item + .item {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     margin-left: 30px;
   }
 }
 .contact-nav {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin-top: 60px;
     font-size: 18px;
     line-height: 1.16;
