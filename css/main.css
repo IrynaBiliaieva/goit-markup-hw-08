@@ -307,7 +307,8 @@ ul {
   margin: 0;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -342,7 +343,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-color: 1px solid transparent;
+  border: 1px solid transparent;
   font-size: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -432,6 +433,14 @@ header {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    z-index: 1;
+    width: 100%;
+    background-color: #ffffff;
+  }
+}
+
 .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,7 +448,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 80px;
+  min-height: 60px;
   width: 100%;
 }
 
@@ -559,10 +568,12 @@ header {
   }
 }
 
-.site-nav .item {
-  position: relative;
-  display: block;
+.site-nav a {
   color: #212121;
+}
+
+.site-nav .item {
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
@@ -571,26 +582,27 @@ header {
   }
 }
 
-.item .current-page {
-  color: #2196f3;
-}
-
-.item .current-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: auto;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-}
-
 @media screen and (min-width: 768px) {
   .site-nav .item + .item {
     margin-left: 30px;
   }
+}
+
+.site-nav .current-page {
+  position: relative;
+  color: #2196f3;
+}
+
+.site-nav .current-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1176,7 +1188,7 @@ textarea:not(:placeholder-shown) + .comment-label {
 }
 
 .our-team > .item {
-  height: 450px;
+  min-height: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -1184,9 +1196,15 @@ textarea:not(:placeholder-shown) + .comment-label {
   padding-bottom: 24px;
 }
 
+@media screen and (max-width: 479px) {
+  .our-team > .item {
+    min-height: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .our-team > .item {
-    height: 422px;
+    min-height: 422px;
     width: calc((100% - 4 * 15px) / 2);
   }
   .our-team > .item:nth-child(2n + 1) {
@@ -1239,7 +1257,6 @@ textarea:not(:placeholder-shown) + .comment-label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*margin-left: 32px;*/
 }
 
 .social-app .item + .item {
@@ -1270,6 +1287,7 @@ textarea:not(:placeholder-shown) + .comment-label {
   fill: #757575;
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 24px;
 }
 
 .social:hover, .social:focus {
@@ -1610,9 +1628,10 @@ button:hover, button:focus {
   background-color: #f5f4fa;
 }
 
-.card-container {
-  padding-left: 15px;
-  padding-right: 15px;
+.card-list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1628,7 +1647,7 @@ button:hover, button:focus {
 .card-list a {
   display: block;
   max-width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1643,7 +1662,7 @@ button:hover, button:focus {
 }
 
 .card-item {
-  min-height: 404px;
+  max-height: 404px;
   margin-right: 30px;
   margin-bottom: 30px;
   background: #ffffff;
@@ -1652,15 +1671,21 @@ button:hover, button:focus {
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 767px) {
+  .card-item {
+    margin-right: 0;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-item {
     width: calc((100% - 4 * 15px) / 2);
   }
   .card-item:nth-child(2n) {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .card-item:nth-last-child(-n + 1) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -1711,5 +1736,12 @@ a:focus .description {
   opacity: 1;
   -webkit-transform: translatey(0);
           transform: translatey(0);
+}
+
+@media screen and (max-width: 420px) {
+  a:hover .description,
+  a:focus .description {
+    overflow-x: scroll;
+  }
 }
 /*# sourceMappingURL=main.css.map */
