@@ -1,7 +1,7 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
+  margin: 0;
 }
 
 .clients .item {
@@ -44,4 +44,8 @@
     fill: $accent-color;
     cursor: pointer;
   }
+}
+
+.our-clients {
+  padding: -15px;
 }

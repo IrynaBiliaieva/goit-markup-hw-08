@@ -2,7 +2,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -45,6 +44,10 @@
 }
 .team-section {
   background-color: #f5f4fa;
+
+  .container {
+    margin: 0;
+  }
 }
 
 .our-team h3,

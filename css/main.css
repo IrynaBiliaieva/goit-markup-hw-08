@@ -1066,7 +1066,6 @@ textarea:not(:placeholder-shown) + .comment-label {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: -30px;
   }
 }
 
@@ -1170,7 +1169,6 @@ textarea:not(:placeholder-shown) + .comment-label {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: -30px;
   }
 }
 
@@ -1229,6 +1227,10 @@ textarea:not(:placeholder-shown) + .comment-label {
 
 .team-section {
   background-color: #f5f4fa;
+}
+
+.team-section .container {
+  margin: 0;
 }
 
 .our-team h3,
@@ -1303,7 +1305,7 @@ textarea:not(:placeholder-shown) + .comment-label {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -15px;
+  margin: 0;
 }
 
 .clients .item {
@@ -1357,6 +1359,10 @@ textarea:not(:placeholder-shown) + .comment-label {
   border: 2px solid #2196f3;
   fill: #2196f3;
   cursor: pointer;
+}
+
+.our-clients {
+  padding: -15px;
 }
 
 footer {
